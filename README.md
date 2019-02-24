@@ -8,13 +8,13 @@ Check out the linked repo above. It's a tool for spell and grammar-checking LaTe
 ## Dockerfiles
 This was my first foray into Docker-land so I did some playing. There are three Dockerfiles available. Obviously the size of them is dependent on the base images in use but the sizes at the time of this writing (Feb 2019) are listed below along with the difference between the images.
 
-### Alpine (Dockerfile)[./Dockerfile]
+### Alpine [(Dockerfile)](.Dockerfile)
 The smallest, at 311MB.
 
-### Debian (Dockerfile.openjdk)[./Dockerfile.openjdk]
+### Debian [(Dockerfile.openjdk)](.Dockerfile.openjdk)
 The only one running Textidote's `.deb` instead of the `.jar` at 460MB.
 
-### Java (Dockerfile.java)[./Dockerfile.java]
+### Java [(Dockerfile.java)](.Dockerfile.java)
 The largest (788MB) but I suppose most likely to be stable? To use it, you need to download the .jar from the [Textidote repo](https://github.com/sylvainhalle/textidote) and build the docker image with `textidote.jar` in the active directory.
 
 ## Building and running
@@ -24,7 +24,7 @@ The largest (788MB) but I suppose most likely to be stable? To use it, you need 
 
 2. Build the docker image `docker build -t mytextidote .
 
-3. Make (textidoteDockerCMD.sh)[./textidoteDockerCMD.sh] executable: `$ chmod +x textidoteDockerCMD.sh`.
+3. Make [textidoteDockerCMD.sh](./textidoteDockerCMD.sh) executable: `$ chmod +x textidoteDockerCMD.sh`.
 
 4. Run on your `.tex` file with `$ .textidoteDockerCMD.sh yourFile.tex`
 
@@ -32,5 +32,3 @@ The largest (788MB) but I suppose most likely to be stable? To use it, you need 
 
 ## Credits
 Sylvain Hallé for Textidote
-
-
