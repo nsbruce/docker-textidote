@@ -1,0 +1,19 @@
+FROM openjdk:10-jre-slim
+
+LABEL Nicholas Bruce nicholas@nicholasbruce.ca
+
+WORKDIR /data
+
+RUN apt-get update \
+&& apt-get install -y wget \
+&& mkdir /temp && cd /temp \
+&& wget https://github.com/sylvainhalle/textidote/releases/download/v0.7.1/textidote_0.7.1_all.deb \
+&& apt-get install ./textidote_0.7.1_all.deb \
+&& cd / \
+&& rm -rf /var/lib/apt/lists/* /temp
+
+VOLUME [ "/data" ]
+
+ENTRYPOINT [ "textidote" ]
+
+#460MB
