@@ -2,6 +2,8 @@
 
 A few options for docker images running [Textidote](https://github.com/sylvainhalle/textidote).
 
+Available on Docker Hub at [nsbruce/textidote](https://hub.docker.com/r/nsbruce/textidote).
+
 ## Textidote
 Check out the linked repo above. It's a tool for spell and grammar-checking LaTeX documents.
 
